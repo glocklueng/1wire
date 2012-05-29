@@ -15,7 +15,7 @@ int main(void)
   SysTickConfig();
   I2C_Config();
 
-  xTaskCreate(I2CLink, "Link to 1-wire master", configMINIMAL_STACK_SIZE, NULL, (1 | portPRIVILEGE_BIT), NULL);
+  //xTaskCreate(I2CLink, "Link to 1-wire master", configMINIMAL_STACK_SIZE, NULL, (1 | portPRIVILEGE_BIT), NULL);
   
   xTaskCreate(ToggleLed, "LED1", configMINIMAL_STACK_SIZE, NULL, (3 | portPRIVILEGE_BIT), NULL);
   xTaskCreate(ToggleLed2, "LED2", configMINIMAL_STACK_SIZE, NULL, (2 | portPRIVILEGE_BIT), NULL);
